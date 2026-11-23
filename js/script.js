@@ -1,3 +1,5 @@
+import { Drawer } from "./bootstrap.bundle.min.js";
+
 const botoesFiltro = document.querySelectorAll(".btn-filtro");
 const cards = document.querySelectorAll(".item-destaque");
 
@@ -50,7 +52,7 @@ const linksMenu = document.querySelectorAll("#menuNavegacao .nav-link");
 linksMenu.forEach((link) => {
     link.addEventListener("click", () => {
         if (menuMobile.open) {
-            bootstrap.Drawer.getOrCreateInstance(menuMobile).hide();
+            Drawer.getOrCreateInstance(menuMobile).hide();
         }
     });
 });
