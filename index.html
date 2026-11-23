@@ -1,19 +1,429 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Silva</title>
+    <meta name="description" content="Portfólio de Michael Felipe — Estudante de Análise e Desenvolvimento de Sistemas (UDF), desenvolvedor de software, empreendedor e entusiasta de tecnologia e games.">
+    <title>Michael Felipe | Portfólio</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Michael Silva</h1>
-    </div>
+    <!-- ======================== CABEÇALHO / NAVEGAÇÃO ======================== -->
+    <header class="sticky-top">
+        <nav class="navbar md:navbar-expand navbar-translucent border-bottom" aria-label="Navegação principal">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-lg" href="#inicio">
+                    Michael <span class="fg-primary">Felipe</span>
+                </a>
+
+                <button class="navbar-toggler btn-icon" type="button" data-bs-toggle="drawer"
+                    data-bs-target="#menuNavegacao" aria-controls="menuNavegacao" aria-label="Abrir menu de navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <dialog class="drawer drawer-end" id="menuNavegacao" aria-labelledby="menuNavegacaoLabel">
+                    <div class="drawer-header border-bottom">
+                        <h2 class="drawer-title fs-lg fw-semibold mb-0" id="menuNavegacaoLabel">Navegação</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Fechar menu"></button>
+                    </div>
+                    <div class="drawer-body">
+                        <ul class="navbar-nav md:ms-auto gap-1 md:gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#inicio">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sobre">Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#destaques">Projetos &amp; Hobbies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#habilidades">Habilidades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contato">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </dialog>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ======================== APRESENTAÇÃO (HERO) ======================== -->
+        <section id="inicio" class="hero-section py-10 md:py-12 border-bottom">
+            <div class="container">
+                <div class="row align-items-center g-7 lg:g-9">
+                    <div class="col-12 md:col-4 text-center">
+                        <img src="img/perfil.jpg" alt="Foto de perfil de Michael Felipe"
+                            class="foto-perfil rounded-circle ratio-1x1 object-fit-cover">
+                    </div>
+
+                    <div class="col-12 md:col-8 text-center md:text-start">
+                        <span class="badge badge-subtle theme-primary mb-4">Brasília, DF • ADS — UDF</span>
+                        <h1 class="fs-4xl fw-bold mb-3">
+                            Olá, eu sou <span class="fg-primary">Michael Felipe</span>
+                        </h1>
+                        <p class="fs-lg fg-2 mb-6">
+                            Estudante de Análise e Desenvolvimento de Sistemas, desenvolvedor de software e empreendedor
+                            focado em aplicações, automações e agentes de IA.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center md:justify-content-start gap-3">
+                            <a href="#destaques" class="btn-solid theme-primary">Ver Projetos &amp; Hobbies</a>
+                            <a href="#contato" class="btn-outline theme-primary">Entrar em Contato</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== SOBRE MIM ======================== -->
+        <section id="sobre" class="py-10 md:py-12 border-bottom">
+            <div class="container">
+                <h2 class="fs-2xl fw-bold mb-2">Sobre mim</h2>
+                <p class="fg-2 mb-7">Um pouco da minha trajetória entre tecnologia, negócios e pessoas.</p>
+
+                <div class="row g-6 align-items-stretch">
+                    <div class="col-12 lg:col-8">
+                        <div class="card bg-1 h-100">
+                            <div class="card-body">
+                                <p class="fg-1">
+                                    Sou Michael Felipe, estudante de Análise e Desenvolvimento de Sistemas em Brasília,
+                                    desenvolvedor de software e empreendedor. Minha trajetória une a criação de
+                                    aplicações, automações e agentes de IA com experiência prática na área comercial e
+                                    no atendimento ao público.
+                                </p>
+                                <p class="fg-2 mb-0">
+                                    O que me motiva é resolver problemas reais com código limpo e criatividade, sempre
+                                    buscando entender tanto a lógica por trás da tecnologia quanto o comportamento das
+                                    pessoas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 lg:col-4">
+                        <div class="card bg-1 h-100">
+                            <div class="card-body">
+                                <h3 class="fs-lg fw-semibold mb-3 fg-primary">Resumo rápido</h3>
+                                <dl class="mb-0">
+                                    <dt class="fs-sm fg-3 fw-semibold">Formação</dt>
+                                    <dd class="mb-3 fg-1">Análise e Desenvolvimento de Sistemas — UDF (concluindo o 2º semestre)</dd>
+
+                                    <dt class="fs-sm fg-3 fw-semibold">Momento atual</dt>
+                                    <dd class="mb-3 fg-1">Focado nos estudos e em projetos próprios</dd>
+
+                                    <dt class="fs-sm fg-3 fw-semibold">Localização</dt>
+                                    <dd class="mb-0 fg-1">Brasília, DF</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== PROJETOS & HOBBIES ======================== -->
+        <section id="destaques" class="py-10 md:py-12 border-bottom">
+            <div class="container">
+                <div class="d-flex flex-column md:flex-row md:justify-content-between md:align-items-end gap-4 mb-7">
+                    <div>
+                        <h2 class="fs-2xl fw-bold mb-2">Projetos &amp; Hobbies</h2>
+                        <p class="fg-2 mb-0">Use os botões abaixo para filtrar o que deseja visualizar.</p>
+                    </div>
+
+                    <!-- Botões de filtro controlados via JavaScript -->
+                    <div class="d-flex flex-wrap gap-2" role="group" aria-label="Filtrar projetos e hobbies">
+                        <button type="button" class="btn-solid theme-primary btn-sm btn-filtro" data-filtro="todos"
+                            aria-pressed="true">
+                            Todos (6)
+                        </button>
+                        <button type="button" class="btn-outline theme-primary btn-sm btn-filtro" data-filtro="projeto"
+                            aria-pressed="false">
+                            Projetos (3)
+                        </button>
+                        <button type="button" class="btn-outline theme-primary btn-sm btn-filtro" data-filtro="hobby"
+                            aria-pressed="false">
+                            Hobbies (3)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row g-6" id="listaDestaques">
+                    <!-- Projeto 1: Controle de Vendas -->
+                    <div class="col-12 md:col-6 lg:col-4 item-destaque" data-categoria="projeto">
+                        <article class="card card-portfolio bg-1 h-100">
+                            <img src="img/projeto-controle-vendas.jpg" alt="Imagem do projeto Controle de Vendas"
+                                class="card-img-top ratio-16x9 object-fit-cover" loading="lazy">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge badge-subtle theme-primary mb-2">Projeto</span>
+                                    <h3 class="fs-lg fw-semibold">Controle de Vendas</h3>
+                                </div>
+                                <p class="fg-2 fs-sm flex-grow-1">
+                                    Site para registrar vendas realizadas em loja física, garantindo controle absoluto de
+                                    dados, insights gerenciais e divisão correta de comissões.
+                                </p>
+                                <!-- Substitua pelo link direto do repositório quando desejar -->
+                                <a href="https://github.com/Lettify?tab=repositories" target="_blank"
+                                    rel="noopener noreferrer" class="btn-outline theme-primary btn-sm">
+                                    Ver no GitHub
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Projeto 2: Nutallis -->
+                    <div class="col-12 md:col-6 lg:col-4 item-destaque" data-categoria="projeto">
+                        <article class="card card-portfolio bg-1 h-100">
+                            <img src="img/projeto-nutallis.jpg" alt="Imagem do projeto Nutallis"
+                                class="card-img-top ratio-16x9 object-fit-cover" loading="lazy">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge badge-subtle theme-primary mb-2">Projeto</span>
+                                    <h3 class="fs-lg fw-semibold">Nutallis</h3>
+                                </div>
+                                <p class="fg-2 fs-sm flex-grow-1">
+                                    Site marketplace desenvolvido para a venda de produtos naturais, unindo organização
+                                    de catálogo e praticidade na experiência de compra.
+                                </p>
+                                <!-- Substitua pelo link direto do repositório quando desejar -->
+                                <a href="https://github.com/Lettify?tab=repositories" target="_blank"
+                                    rel="noopener noreferrer" class="btn-outline theme-primary btn-sm">
+                                    Ver no GitHub
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Projeto 3: Let-Assistant -->
+                    <div class="col-12 md:col-6 lg:col-4 item-destaque" data-categoria="projeto">
+                        <article class="card card-portfolio bg-1 h-100">
+                            <img src="img/projeto-let-assistant.jpg" alt="Imagem do projeto Let-Assistant"
+                                class="card-img-top ratio-16x9 object-fit-cover" loading="lazy">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge badge-subtle theme-primary mb-2">Projeto</span>
+                                    <h3 class="fs-lg fw-semibold">Let-Assistant</h3>
+                                </div>
+                                <p class="fg-2 fs-sm flex-grow-1">
+                                    Bot de Discord criado para atuar como moderador e controlador de recursos em um
+                                    servidor, automatizando a gestão da comunidade.
+                                </p>
+                                <!-- Substitua pelo link direto do repositório quando desejar -->
+                                <a href="https://github.com/Lettify?tab=repositories" target="_blank"
+                                    rel="noopener noreferrer" class="btn-outline theme-primary btn-sm">
+                                    Ver no GitHub
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Hobby 1: Mobile Legends: Bang Bang -->
+                    <div class="col-12 md:col-6 lg:col-4 item-destaque" data-categoria="hobby">
+                        <article class="card card-portfolio bg-1 h-100">
+                            <img src="img/hobby-mlbb.jpg" alt="Imagem do jogo Mobile Legends: Bang Bang"
+                                class="card-img-top ratio-16x9 object-fit-cover" loading="lazy">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge badge-outline theme-primary mb-2">Hobby</span>
+                                    <h3 class="fs-lg fw-semibold">Mobile Legends: Bang Bang</h3>
+                                </div>
+                                <p class="fg-2 fs-sm mb-0">
+                                    Um dos meus jogos favoritos para relaxar e exercitar estratégia em equipe, tomada
+                                    rápida de decisão e leitura de partida.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Hobby 2: Battlefield 6 -->
+                    <div class="col-12 md:col-6 lg:col-4 item-destaque" data-categoria="hobby">
+                        <article class="card card-portfolio bg-1 h-100">
+                            <img src="img/hobby-bf6.jpg" alt="Imagem do jogo Battlefield 6"
+                                class="card-img-top ratio-16x9 object-fit-cover" loading="lazy">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge badge-outline theme-primary mb-2">Hobby</span>
+                                    <h3 class="fs-lg fw-semibold">Battlefield 6</h3>
+                                </div>
+                                <p class="fg-2 fs-sm mb-0">
+                                    Partidas intensas em larga escala com foco em trabalho coordenado de esquadrão e
+                                    estratégia em campo.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Hobby 3: Programação de Bot de Discord -->
+                    <div class="col-12 md:col-6 lg:col-4 item-destaque" data-categoria="hobby">
+                        <article class="card card-portfolio bg-1 h-100">
+                            <img src="img/hobby-discord-bot.jpg" alt="Imagem sobre programação de Bot de Discord"
+                                class="card-img-top ratio-16x9 object-fit-cover" loading="lazy">
+                            <div class="card-body">
+                                <div>
+                                    <span class="badge badge-outline theme-primary mb-2">Hobby</span>
+                                    <h3 class="fs-lg fw-semibold">Programação de Bot de Discord</h3>
+                                </div>
+                                <p class="fg-2 fs-sm mb-0">
+                                    Programar bots de Discord também é um hobby onde exploro automações, comandos
+                                    personalizados e novas ideias com código.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== HABILIDADES & INTERESSES ======================== -->
+        <section id="habilidades" class="py-10 md:py-12 border-bottom">
+            <div class="container">
+                <h2 class="fs-2xl fw-bold mb-2">Habilidades &amp; Interesses</h2>
+                <p class="fg-2 mb-7">Tecnologias com as quais trabalho e temas que acompanho no dia a dia.</p>
+
+                <div class="row g-6">
+                    <div class="col-12 md:col-6">
+                        <div class="card bg-1 h-100">
+                            <div class="card-body">
+                                <h3 class="fs-lg fw-semibold mb-3">Tecnologias &amp; Stack</h3>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge badge-subtle theme-primary badge-lg">JavaScript</span>
+                                    <span class="badge badge-subtle theme-primary badge-lg">Python</span>
+                                    <span class="badge badge-subtle theme-primary badge-lg">Node.js</span>
+                                    <span class="badge badge-subtle theme-primary badge-lg">MongoDB</span>
+                                    <span class="badge badge-subtle theme-primary badge-lg">SQL</span>
+                                    <span class="badge badge-subtle theme-primary badge-lg">HTML &amp; Bootstrap</span>
+                                    <span class="badge badge-subtle theme-primary badge-lg">Agentes de IA &amp; Automações</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 md:col-6">
+                        <div class="card bg-1 h-100">
+                            <div class="card-body">
+                                <h3 class="fs-lg fw-semibold mb-3">Interesses Pessoais</h3>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge badge-outline theme-primary badge-lg">Jogos</span>
+                                    <span class="badge badge-outline theme-primary badge-lg">Comportamento Humano</span>
+                                    <span class="badge badge-outline theme-primary badge-lg">Linguagem Corporal</span>
+                                    <span class="badge badge-outline theme-primary badge-lg">Música</span>
+                                    <span class="badge badge-outline theme-primary badge-lg">Empreendedorismo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== CONTATO ======================== -->
+        <section id="contato" class="py-10 md:py-12">
+            <div class="container">
+                <h2 class="fs-2xl fw-bold mb-2">Contato</h2>
+                <p class="fg-2 mb-7">Quer trocar uma ideia sobre tecnologia, projetos ou estudos? Me chame por aqui.</p>
+
+                <div class="row g-7 align-items-start">
+                    <div class="col-12 lg:col-5">
+                        <div class="d-flex flex-column gap-3">
+                            <a href="mailto:contato@michael.dev.br"
+                                class="link-contato bg-1 border rounded-6 p-4 text-decoration-none fg-body d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="d-block fs-xs fg-3 fw-semibold text-uppercase">E-mail</span>
+                                    <span class="fw-medium">contato@michael.dev.br</span>
+                                </div>
+                                <span class="fg-primary fw-semibold" aria-hidden="true">&rarr;</span>
+                            </a>
+
+                            <a href="https://github.com/Lettify" target="_blank" rel="noopener noreferrer"
+                                class="link-contato bg-1 border rounded-6 p-4 text-decoration-none fg-body d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="d-block fs-xs fg-3 fw-semibold text-uppercase">GitHub</span>
+                                    <span class="fw-medium">github.com/Lettify</span>
+                                </div>
+                                <span class="fg-primary fw-semibold" aria-hidden="true">&rarr;</span>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/michael-felipe-ss/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="link-contato bg-1 border rounded-6 p-4 text-decoration-none fg-body d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="d-block fs-xs fg-3 fw-semibold text-uppercase">LinkedIn</span>
+                                    <span class="fw-medium">linkedin.com/in/michael-felipe-ss</span>
+                                </div>
+                                <span class="fg-primary fw-semibold" aria-hidden="true">&rarr;</span>
+                            </a>
+
+                            <a href="https://instagram.com/michael.fss" target="_blank" rel="noopener noreferrer"
+                                class="link-contato bg-1 border rounded-6 p-4 text-decoration-none fg-body d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="d-block fs-xs fg-3 fw-semibold text-uppercase">Instagram</span>
+                                    <span class="fw-medium">@michael.fss</span>
+                                </div>
+                                <span class="fg-primary fw-semibold" aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 lg:col-7">
+                        <div class="card bg-1">
+                            <div class="card-body">
+                                <h3 class="fs-lg fw-semibold mb-3">Envie uma mensagem</h3>
+                                <form id="formContato" novalidate>
+                                    <div class="mb-4">
+                                        <label for="nome" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="nome" name="nome"
+                                            placeholder="Seu nome completo" required>
+                                        <div class="invalid-feedback">
+                                            Por favor, informe seu nome (mínimo 2 caracteres).
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label for="email" class="form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="voce@exemplo.com" required>
+                                        <div class="invalid-feedback">
+                                            Por favor, informe um endereço de e-mail válido.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-5">
+                                        <label for="mensagem" class="form-label">Mensagem</label>
+                                        <textarea class="form-control" id="mensagem" name="mensagem" rows="4"
+                                            placeholder="Escreva sua mensagem..." required></textarea>
+                                        <div class="invalid-feedback">
+                                            Escreva uma mensagem com pelo menos 10 caracteres.
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn-solid theme-primary">Enviar mensagem</button>
+
+                                    <div id="feedbackContato" class="alert theme-success mt-5 d-none" role="status"
+                                        aria-live="polite"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================== RODAPÉ ======================== -->
+    <footer class="border-top py-6 text-center fg-3 fs-sm">
+        <div class="container">
+            <p class="mb-0">&copy; <span id="anoAtual">2026</span> Michael Felipe &bull; Projeto avaliativo — UDF.</p>
+        </div>
+    </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
