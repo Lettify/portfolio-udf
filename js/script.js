@@ -1,116 +1,61 @@
-// Aguarda o carregamento completo do HTML antes de iniciar os scripts
-document.addEventListener("DOMContentLoaded", () => {
-    atualizarAnoRodape();
-    configurarMenuMobile();
-    configurarFiltroDestaques();
-    configurarFormularioContato();
-});
+// 1. Filtro dos cards de Projetos e Hobbies
+const botoesFiltro = document.querySelectorAll(".btn-filtro");
+const cards = document.querySelectorAll(".item-destaque");
 
-// Atualiza o ano exibido no rodapé
-function atualizarAnoRodape() {
-    const elementoAno = document.getElementById("anoAtual");
-    if (elementoAno) {
-        elementoAno.textContent = new Date().getFullYear();
-    }
-}
+botoesFiltro.forEach((botao) => {
+    botao.addEventListener("click", () => {
+        const filtro = botao.dataset.filtro;
 
-// Fecha automaticamente o menu lateral (drawer) no celular após clicar em um link
-function configurarMenuMobile() {
-    const menuDrawer = document.getElementById("menuNavegacao");
-    if (!menuDrawer) return;
+        // Destaca o botão clicado
+        botoesFiltro.forEach((b) => {
+            b.classList.remove("btn-solid");
+            b.classList.add("btn-outline");
+        });
+        botao.classList.remove("btn-outline");
+        botao.classList.add("btn-solid");
 
-    const linksMenu = menuDrawer.querySelectorAll(".nav-link");
-    linksMenu.forEach((link) => {
-        link.addEventListener("click", () => {
-            if (menuDrawer.open && window.bootstrap && window.bootstrap.Drawer) {
-                window.bootstrap.Drawer.getOrCreateInstance(menuDrawer).hide();
+        // Mostra ou esconde os cards conforme a categoria
+        cards.forEach((card) => {
+            const categoria = card.dataset.categoria;
+            if (filtro === "todos" || categoria === filtro) {
+                card.classList.remove("d-none");
+            } else {
+                card.classList.add("d-none");
             }
         });
     });
-}
+});
 
-// Filtra os cards da seção "Projetos & Hobbies" por categoria
-function configurarFiltroDestaques() {
-    const botoesFiltro = document.querySelectorAll(".btn-filtro");
-    const itens = document.querySelectorAll(".item-destaque");
+// 2. Validação simples do formulário de contato
+const form = document.getElementById("formContato");
+const mensagemStatus = document.getElementById("mensagemStatus");
 
-    if (!botoesFiltro.length || !itens.length) return;
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-    botoesFiltro.forEach((botao) => {
-        botao.addEventListener("click", () => {
-            const categoriaSelecionada = botao.dataset.filtro;
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
 
-            // Atualiza a aparência e estado acessível dos botões
-            botoesFiltro.forEach((btn) => {
-                const ativo = btn === botao;
-                btn.classList.toggle("btn-solid", ativo);
-                btn.classList.toggle("btn-outline", !ativo);
-                btn.setAttribute("aria-pressed", String(ativo));
-            });
+    if (nome === "" || !email.includes("@") || mensagem === "") {
+        mensagemStatus.textContent = "Por favor, preencha todos os campos corretamente.";
+        mensagemStatus.className = "alert theme-danger mt-4";
+        return;
+    }
 
-            // Mostra apenas os cards que correspondem ao filtro escolhido
-            itens.forEach((item) => {
-                const corresponde =
-                    categoriaSelecionada === "todos" ||
-                    item.dataset.categoria === categoriaSelecionada;
-                item.classList.toggle("d-none", !corresponde);
-            });
-        });
-    });
-}
+    mensagemStatus.textContent = "Obrigado, " + nome + "! Sua mensagem foi enviada com sucesso.";
+    mensagemStatus.className = "alert theme-success mt-4";
+    form.reset();
+});
 
-// Valida os campos do formulário de contato e exibe confirmação na tela
-function configurarFormularioContato() {
-    const formulario = document.getElementById("formContato");
-    const campoNome = document.getElementById("nome");
-    const campoEmail = document.getElementById("email");
-    const campoMensagem = document.getElementById("mensagem");
-    const feedback = document.getElementById("feedbackContato");
+// 3. Fecha o menu mobile ao clicar em um link
+const menuMobile = document.getElementById("menuNavegacao");
+const linksMenu = document.querySelectorAll("#menuNavegacao .nav-link");
 
-    if (!formulario || !campoNome || !campoEmail || !campoMensagem || !feedback) return;
-
-    const padraoEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const campos = [campoNome, campoEmail, campoMensagem];
-
-    // Remove o estado de erro assim que o usuário volta a digitar
-    campos.forEach((campo) => {
-        campo.addEventListener("input", () => {
-            campo.classList.remove("is-invalid");
-        });
-    });
-
-    formulario.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        const nome = campoNome.value.trim();
-        const email = campoEmail.value.trim();
-        const mensagem = campoMensagem.value.trim();
-
-        const nomeValido = nome.length >= 2;
-        const emailValido = padraoEmail.test(email);
-        const mensagemValida = mensagem.length >= 10;
-
-        aplicarEstadoCampo(campoNome, nomeValido);
-        aplicarEstadoCampo(campoEmail, emailValido);
-        aplicarEstadoCampo(campoMensagem, mensagemValida);
-
-        if (!nomeValido || !emailValido || !mensagemValida) {
-            feedback.classList.add("d-none");
-            const primeiroInvalido = formulario.querySelector(".is-invalid");
-            if (primeiroInvalido) primeiroInvalido.focus();
-            return;
+linksMenu.forEach((link) => {
+    link.addEventListener("click", () => {
+        if (menuMobile.open) {
+            bootstrap.Drawer.getOrCreateInstance(menuMobile).hide();
         }
-
-        // Exibe retorno visual seguro usando textContent
-        feedback.textContent = `Obrigado, ${nome}! Sua mensagem foi validada e registrada com sucesso.`;
-        feedback.classList.remove("d-none");
-
-        formulario.reset();
-        campos.forEach((campo) => campo.classList.remove("is-valid", "is-invalid"));
     });
-}
-
-function aplicarEstadoCampo(campo, valido) {
-    campo.classList.toggle("is-valid", valido);
-    campo.classList.toggle("is-invalid", !valido);
-}
+});

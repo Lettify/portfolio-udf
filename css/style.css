@@ -1,74 +1,37 @@
-:root,
-[data-bs-theme="dark"] {
-    /* Substitui a cor primária padrão (azul) pela escala violeta do Bootstrap */
-    --bs-primary-base: var(--bs-violet-500);
-    --bs-primary-fg: var(--bs-violet-400);
-    --bs-primary-fg-emphasis: var(--bs-violet-200);
-    --bs-primary-bg: var(--bs-violet-500);
-    --bs-primary-bg-subtle: var(--bs-violet-900);
-    --bs-primary-bg-muted: var(--bs-violet-800);
-    --bs-primary-border: var(--bs-violet-600);
-    --bs-primary-focus-ring: color-mix(in oklch, var(--bs-violet-500) 75%, var(--bs-bg-body));
-    --bs-primary-contrast: var(--bs-white);
-
-    --bs-link-color: var(--bs-violet-400);
-    --bs-link-hover-color: var(--bs-violet-300);
+:root {
+    --bs-primary-bg: #7c3aed;
+    --bs-primary-fg: #a78bfa;
+    --bs-primary-border: #7c3aed;
+    --bs-primary-bg-subtle: rgba(124, 58, 237, 0.2);
+    --bs-primary-contrast: #ffffff;
+    --bs-link-color: #a78bfa;
+    --bs-link-hover-color: #c4b5fd;
 }
 
-/* Rolagem suave e espaço extra para o cabeçalho fixo não cobrir os títulos */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4.5rem;
+    scroll-padding-top: 70px;
 }
 
-/* Destaque sutil no topo da página */
-.hero-section {
-    background: radial-gradient(circle at top center,
-            color-mix(in oklch, var(--bs-violet-500) 14%, transparent),
-            transparent 65%);
-}
-
-/* Foto de perfil responsiva com borda e brilho roxo */
 .foto-perfil {
-    width: 170px;
-    height: 170px;
-    border: 3px solid var(--bs-violet-500);
-    box-shadow: 0 0 28px color-mix(in oklch, var(--bs-violet-500) 35%, transparent);
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid #7c3aed;
 }
 
-@media (min-width: 768px) {
-    .foto-perfil {
-        width: 220px;
-        height: 220px;
-    }
+.card-img-top {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
-/* Cards de projetos e hobbies com transição suave */
 .card-portfolio {
     overflow: hidden;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s;
 }
 
-@media (hover: hover) {
-    .card-portfolio:hover {
-        transform: translateY(-4px);
-        border-color: var(--bs-violet-500);
-    }
-}
-
-.card-portfolio .card-img-top {
-    width: 100%;
-    display: block;
-}
-
-/* Cartões de link na seção de contato */
-.link-contato {
-    transition: border-color 0.2s ease, background-color 0.2s ease;
-}
-
-@media (hover: hover) {
-    .link-contato:hover {
-        border-color: var(--bs-violet-500);
-        background-color: var(--bs-bg-2);
-    }
+.card-portfolio:hover {
+    transform: translateY(-4px);
+    border-color: #7c3aed;
 }

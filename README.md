@@ -1,17 +1,16 @@
 # Portfolio UDF
 
-Projeto avaliativo da disciplina **Desenvolvimento Front-end para Web** (UDF), consistindo em uma landing page de portfólio pessoal para **Michael Felipe**, unindo projetos de software, trajetória acadêmica e hobbies em um layout responsivo (mobile-first) com tema escuro e destaque em roxo.
+Projeto avaliativo da disciplina **Desenvolvimento Front-end para Web** (UDF), consistindo em uma landing page de portfólio pessoal para **Michael Felipe**, reunindo projetos, trajetória acadêmica e hobbies em um layout responsivo com tema escuro e destaque em roxo.
 
 ## Tecnologias utilizadas
 
-- **HTML5** — estrutura semântica da página única (`index.html`).
-- **Bootstrap `v6.0.0-alpha.1`** — grid responsivo, tema escuro (`data-bs-theme="dark"`), barra de navegação com menu lateral mobile (`drawer`), cards, badges e formulários carregados localmente.
-- **CSS3 (`css/style.css`)** — customização da paleta roxa usando tokens violeta do Bootstrap e ajustes sutis de layout e transições.
-- **JavaScript (`js/script.js`)** — interatividade simples e modular:
-  - Fechamento automático do menu mobile (`drawer`) ao selecionar um link;
-  - Filtro de categorias na seção **Projetos & Hobbies** (*Todos*, *Projetos* e *Hobbies*);
-  - Validação do formulário de contato com feedback visual na página;
-  - Atualização automática do ano no rodapé.
+- **HTML5** — estrutura da página única.
+- **Bootstrap** — grid responsivo, tema escuro, menu lateral mobile, cards, badges e formulários carregados localmente.
+- **CSS3** — ajustes de cor roxa, tamanho das imagens e efeito simples nos cards.
+- **JavaScript** — interatividade básica:
+  - Filtro entre *Todos*, *Projetos* e *Hobbies*;
+  - Validação simples do formulário de contato com mensagem na tela;
+  - Fechamento automático do menu mobile ao clicar em um link.
 
 ## Estrutura do repositório
 
@@ -19,7 +18,7 @@ Projeto avaliativo da disciplina **Desenvolvimento Front-end para Web** (UDF), c
 portfolio-udf/
 ├── css/
 │   ├── bootstrap.min.css   # CSS compilado do Bootstrap
-│   └── style.css           # Tema roxo e estilos complementares do portfólio
+│   └── style.css           # Estilos personalizados do portfólio
 ├── img/
 │   ├── perfil.jpg
 │   ├── projeto-controle-vendas.jpg
@@ -30,8 +29,8 @@ portfolio-udf/
 │   └── hobby-discord-bot.jpg
 ├── js/
 │   ├── bootstrap.bundle.min.js  # JavaScript compilado do Bootstrap
-│   └── script.js                # Scripts de filtro, menu mobile e validação do formulário
-├── index.html                   # Landing page principal do portfólio
+│   └── script.js                # Scripts de filtro, formulário e menu mobile
+├── index.html                   # Página principal do portfólio
 └── README.md                    # Documentação do projeto
 ```
 
