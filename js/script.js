@@ -1,4 +1,3 @@
-// 1. Filtro dos cards de Projetos e Hobbies
 const botoesFiltro = document.querySelectorAll(".btn-filtro");
 const cards = document.querySelectorAll(".item-destaque");
 
@@ -6,7 +5,6 @@ botoesFiltro.forEach((botao) => {
     botao.addEventListener("click", () => {
         const filtro = botao.dataset.filtro;
 
-        // Destaca o botão clicado
         botoesFiltro.forEach((b) => {
             b.classList.remove("btn-solid");
             b.classList.add("btn-outline");
@@ -14,7 +12,6 @@ botoesFiltro.forEach((botao) => {
         botao.classList.remove("btn-outline");
         botao.classList.add("btn-solid");
 
-        // Mostra ou esconde os cards conforme a categoria
         cards.forEach((card) => {
             const categoria = card.dataset.categoria;
             if (filtro === "todos" || categoria === filtro) {
@@ -26,7 +23,6 @@ botoesFiltro.forEach((botao) => {
     });
 });
 
-// 2. Validação simples do formulário de contato
 const form = document.getElementById("formContato");
 const mensagemStatus = document.getElementById("mensagemStatus");
 
@@ -48,7 +44,6 @@ form.addEventListener("submit", (event) => {
     form.reset();
 });
 
-// 3. Fecha o menu mobile ao clicar em um link
 const menuMobile = document.getElementById("menuNavegacao");
 const linksMenu = document.querySelectorAll("#menuNavegacao .nav-link");
 
