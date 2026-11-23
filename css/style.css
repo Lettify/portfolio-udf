@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Estilos personalizados do Portfólio — Michael Felipe
-   Complemento simples ao Bootstrap v6 (tema escuro com destaque roxo)
-   ========================================================================== */
-
 :root,
 [data-bs-theme="dark"] {
     /* Substitui a cor primária padrão (azul) pela escala violeta do Bootstrap */
@@ -28,11 +23,9 @@ html {
 
 /* Destaque sutil no topo da página */
 .hero-section {
-    background: radial-gradient(
-        circle at top center,
-        color-mix(in oklch, var(--bs-violet-500) 14%, transparent),
-        transparent 65%
-    );
+    background: radial-gradient(circle at top center,
+            color-mix(in oklch, var(--bs-violet-500) 14%, transparent),
+            transparent 65%);
 }
 
 /* Foto de perfil responsiva com borda e brilho roxo */
