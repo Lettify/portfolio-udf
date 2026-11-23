@@ -1,6 +1,6 @@
 # Portfolio UDF
 
-Projeto avaliativo da disciplina **Desenvolvimento Front-end para Web** (UDF), consistindo em uma landing page de portfólio pessoal para **Michael Felipe**, reunindo projetos, trajetória acadêmica e hobbies em um layout responsivo com tema escuro e destaque em roxo.
+Projeto avaliativo da disciplina **Desenvolvimento Front-end para Web** (UDF), consistindo em uma landing page de portfólio pessoal para **Michael Silva**, reunindo projetos, trajetória acadêmica e hobbies em um layout responsivo com tema escuro e destaque em roxo.
 
 ## Tecnologias utilizadas
 
@@ -50,7 +50,7 @@ Não é necessário instalar dependências ou executar etapa de build.
 
 ## Autor
 
-**Michael Felipe** — Brasília, DF
+**Michael Silva** — Brasília, DF
 - GitHub: [github.com/Lettify](https://github.com/Lettify)
 - LinkedIn: [linkedin.com/in/michael-felipe-ss](https://www.linkedin.com/in/michael-felipe-ss/)
 - Instagram: [@michael.fss](https://instagram.com/michael.fss)
